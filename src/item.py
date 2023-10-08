@@ -17,7 +17,9 @@ class Item:
         return f'Item(\'{self.name}\', {self.price}, {self.amount})'
 
     def calculate_total_price(self):
+        """return total price of all items of the category"""
         return self.price * self.amount
 
     def apply_discount(self):
+        """return discounted price of one item"""
         self.price *= self.pay_rate
