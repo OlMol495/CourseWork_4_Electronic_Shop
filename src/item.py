@@ -14,10 +14,10 @@ class Item:
         #self.all.append({"название": self.name, "цена": self.price, "количество": self.amount})
 
     def __str__(self):
-        return f"Item('{self.__name}', {self.price}, {self.amount})"
+        return f'{self.__name}'
 
     def __repr__(self):
-        return f'{self.__name}'
+        return  f"Item('{self.__name}', {self.price}, {self.amount})"
 
     def calculate_total_price(self):
         """return total price of all items of the category"""
