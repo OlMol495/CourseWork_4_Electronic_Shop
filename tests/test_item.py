@@ -8,11 +8,11 @@ test_item = Item("Watches", 10000, 5) #test exemplar
 test_item1 = Item("Laptop", 60000, 3)
 
 def test_str():
-    assert test_item.__str__() == "товар Watches, цена за единицу 10000, количество 5"
+    assert test_item.__str__() == "Item('Watches', 10000, 5)"
 
 
 def test_repr():
-    assert test_item.__repr__() == "Item('Watches', 10000, 5)"
+    assert test_item.__repr__() == 'Watches'
 
 
 def test_calculate_total_price():
