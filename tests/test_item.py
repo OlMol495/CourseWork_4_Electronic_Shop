@@ -43,12 +43,8 @@ def test_string_to_number():
 
 def test_instantiate_from_csv_len():
     """checking that function creates list of right length"""
-    Item.instantiate_from_csv("src/items.csv")
+    Item.instantiate_from_csv("../src/items.csv")
     assert len(Item.all) == 5
-
-
-
-
 
 
 

@@ -53,9 +53,3 @@ class Item:
                 amount = row["quantity"]
                 cls(name, price, amount)
 
-
-
-
-
-
-
