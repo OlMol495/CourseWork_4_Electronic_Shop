@@ -1,5 +1,4 @@
 import csv
-from src.phone import Phone
 
 class Item:
     """Класс для общих данных по товару в магазине: название, цена, количество"""
@@ -55,8 +54,8 @@ class Item:
                 cls(name, price, amount)
 
     def __add__(self, other):
-        if isinstance(other, (Item, Phone)):
-            return self.amount + other.amount
-        raise ValueError("Нельзя складывать экземпляры, не принадлежащие классам Item или Phone")
+        if not isinstance(other, Item):
+            raise ValueError("Нельзя складывать экземпляры, не принадлежащие классам Item или Phone")
+        return self.amount + other.amount
 
 

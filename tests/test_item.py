@@ -1,9 +1,7 @@
 """Здесь надо написать тесты с использованием pytest для модуля item."""
 from src.item import Item
 from src.phone import Phone
-import csv
-import os
-import pytest
+
 
 test_item = Item("Watches", 10000, 5) #test exemplar
 test_item1 = Item("Laptop", 60000, 3)
