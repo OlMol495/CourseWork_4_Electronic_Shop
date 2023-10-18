@@ -1,4 +1,5 @@
 import csv
+from src.phone import Phone
 
 class Item:
     """Класс для общих данных по товару в магазине: название, цена, количество"""
@@ -13,11 +14,11 @@ class Item:
         self.all.append(self)
         #self.all.append({"название": self.name, "цена": self.price, "количество": self.amount})
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'{self.__name}'
 
-    def __repr__(self):
-        return  f"Item('{self.__name}', {self.price}, {self.amount})"
+    def __repr__(self) -> str:
+        return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.amount})"
 
     def calculate_total_price(self):
         """return total price of all items of the category"""
@@ -52,4 +53,10 @@ class Item:
                 price = row["price"]
                 amount = row["quantity"]
                 cls(name, price, amount)
+
+    def __add__(self, other):
+        if isinstance(other, (Item, Phone)):
+            return self.amount + other.amount
+        raise ValueError("Нельзя складывать экземпляры, не принадлежащие классам Item или Phone")
+
 

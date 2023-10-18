@@ -1,11 +1,14 @@
 """Здесь надо написать тесты с использованием pytest для модуля item."""
 from src.item import Item
+from src.phone import Phone
 import csv
 import os
 import pytest
 
 test_item = Item("Watches", 10000, 5) #test exemplar
 test_item1 = Item("Laptop", 60000, 3)
+test_phone1 = Phone("LG", 30000, 3, 2)
+test_phone2 = Phone("Xaomi", 40000, 5, 4)
 
 def test_str():
     assert test_item.__str__() == 'Watches'
@@ -45,6 +48,8 @@ def test_instantiate_from_csv_len():
     """checking that function creates list of right length"""
     Item.instantiate_from_csv("../src/items.csv")
     assert len(Item.all) == 5
+
+
 
 
 
