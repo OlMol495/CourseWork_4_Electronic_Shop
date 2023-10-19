@@ -2,6 +2,7 @@ from src.item import Item
 from src.phone import Phone
 import pytest
 
+
 test_item = Item("Watches", 10000, 5) #test exemplar
 test_item1 = Item("Laptop", 60000, 3)
 test_phone1 = Phone("LG", 30000, 3, 2)
