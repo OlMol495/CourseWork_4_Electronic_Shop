@@ -54,6 +54,7 @@ class Item:
                 cls(name, price, amount)
 
     def __add__(self, other):
+        """складываем два экземпляра по количеству товара"""
         if not isinstance(other, Item):
             raise ValueError("Нельзя складывать экземпляры, не принадлежащие классам Item или Phone")
         return self.amount + other.amount

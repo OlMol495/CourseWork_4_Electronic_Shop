@@ -14,9 +14,11 @@ def test_phone_repr():
     assert test_phone1.__repr__() == "Phone('LG', 30000, 3, 2)"
 
 def test_add_dc():
+    """тест на сложение двух экземпляров по количеству товара"""
     assert test_item + test_phone1 == 8
 
 def test_add_error():
+    """тест на ошибку, если складываются не экземпляры нужных классов"""
     with pytest.raises(ValueError) as err:
         test_item + 2000
         assert str(err.value) == "Нельзя складывать экземпляры, не принадлежащие классам Item или Phone"
