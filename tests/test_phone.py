@@ -27,7 +27,7 @@ def test_add_error():
 def test_setter_number_of_sim():
     """тест на ошибку, если количество симок указано неверно"""
     with pytest.raises(ValueError) as err:
-        test_phone1.number_of_sim = 1
+        test_phone1.number_of_sim = 1.1
         assert str(err.value) == "Количество сим-карт должно быть целым числом и больше нуля"
 
 def test_setter_number_of_sim_ins():
